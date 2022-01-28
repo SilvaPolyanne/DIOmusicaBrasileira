@@ -1,0 +1,56 @@
+using System;
+
+namespace DIOmusicaBrasileira
+
+{
+    public class Musica : EntidadeBase
+    {
+        //Atributos
+        private string NomeInterprete { get; set; }
+		private string NomeMusica { get; set; }
+		private int Ano { get; set; }
+        private Genero Genero { get; set; }
+        private string LetraMusica { get; set; }
+        private bool Excluido { get; set; }
+
+        //Metodos
+        public Musica(int id, string nomeinterprete, string nomemusica, int ano, Genero genero)
+        {
+            this.Id = id;
+            this.NomeInterprete = nomeinterprete;
+            this.NomeMusica = nomemusica;
+            this.Ano = ano;
+            this.Genero = genero;
+            this.LetraMusica = letramusica;
+            this.Excluido = false;
+        }
+
+        public override string ToString()
+        {
+            string retorno = "";
+            retorno += "Nome do intérprete: " + this.NomeInterprete + Environment.NewLine;
+            retorno += "Nome da música: " + this.NomeMusica + Environment.NewLine;
+            retorno += "Ano de lançamento: " + this.Ano + Environment.NewLine;
+            retorno += "Gênero da música: " + this.Genero + Environment.NewLine;
+            retorno += "Letra da música: " + this.LetraMusica + Environment.NewLine;
+            retorno += "Excluído: " + this.Excluido;
+            return retorno;
+        }
+
+        //Encapsulamento
+        public string retornaTitulo()
+        {
+            return this.NomeMusica;
+        }
+
+        public int retornaId()
+        {
+            return this.Id;
+        }
+
+        public void Excluir()
+        {
+            this.Excluido = true;
+        }
+    }
+}

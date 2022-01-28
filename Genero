@@ -1,0 +1,22 @@
+using System;
+
+namespace DIOmusicaBrasileira
+
+{
+    public enum Genero
+    {
+        Axé = 1,
+        Bossa Nova = 2,
+        Brega = 3,
+        Choro = 4,
+        Forró = 5,
+        Funk = 6,
+        Lambada = 7,
+        MPB = 8,
+        Pagode = 9,
+        PiseiroPisadinha = 10,
+        Sertanejo = 11,
+        Samba = 12
+
+    }
+}
